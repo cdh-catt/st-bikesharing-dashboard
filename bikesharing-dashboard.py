@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
+
+# -------- import csv
+dayHour_df= pd.read_csv("dayHour_data.csv")
+
+
 # -------- helper func
 # hours change
 def both_hoursRenting_df(df):
@@ -42,10 +47,6 @@ def registered_weatherRenter_df(df):
     registeredWeather= df.groupby("weathersit_day")["registered_day"].mean().reset_index().sort_values("registered_day")
 
     return registeredWeather
-
-
-# -------- import csv
-dayHour_df= pd.read_csv("C:/Users/WINDOWS/OneDrive/Dokumen/submission/dashboard/dayHour_data.csv")
 
 # ------------- filter
 datetime_columns = ["dteday"]
