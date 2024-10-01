@@ -86,7 +86,6 @@ registeredWeather= registered_weatherRenter_df(time_df)
 st.subheader("Bike Renting per Hour")
 
 fig, ax = plt.subplots(figsize=(16, 8))
-sns.set_style("whitegrid")
 ax.plot(
     rentPerHour["hr"],
     rentPerHour["cnt_hr"],
